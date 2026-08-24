@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ücretsiz ve düzenli ders çalışma platformu.">
+  <title>İlerleme | Ücretsiz Ders Çalışma</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#anasayfa" aria-label="İlerleme ana sayfa">
+      <span class="brand-mark">İ</span>
+      <span>ilerleme</span>
+    </a>
+    <nav aria-label="Ana menü">
+      <a href="#dersler">Dersler</a>
+      <a href="#plan">Çalışma planım</a>
+      <a href="#hakkinda">Proje</a>
+    </nav>
+    <button class="profile-button" type="button" id="profileButton">Giriş yap</button>
+  </header>
+
+  <main id="anasayfa">
+    <section class="hero section-wrap">
+      <div class="hero-copy">
+        <p class="eyebrow">Ücretsiz öğrenme alanın</p>
+        <h1>Her gün biraz daha <em>ilerle.</em></h1>
+        <p class="hero-text">Konularını düzenle, eksiklerini keşfet ve kendi hızında çalış. Başlamak için bir ders seçmen yeterli.</p>
+        <a class="primary-button" href="#dersler">Derslere göz at <span aria-hidden="true">↘</span></a>
+      </div>
+      <div class="hero-note" aria-label="Bugünün çalışma hedefi">
+        <span class="note-label">BUGÜNÜN HEDEFİ</span>
+        <strong>25 dk</strong>
+        <div class="progress-line"><span></span></div>
+        <p>Çalışma ritmini oluştur</p>
+      </div>
+    </section>
+
+    <section class="stats section-wrap" id="plan">
+      <div><strong>4</strong><span>Ders alanı</span></div>
+      <div><strong>12</strong><span>Başlangıç konusu</span></div>
+      <div><strong>0₺</strong><span>Her zaman ücretsiz</span></div>
+      <div class="streak"><strong>0 gün</strong><span>Çalışma serin</span></div>
+    </section>
+
+    <section class="courses section-wrap" id="dersler">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Kütüphane</p>
+          <h2>Bir ders seç, yolculuğa başla.</h2>
+        </div>
+        <label class="search-box"><span aria-hidden="true">⌕</span><input id="courseSearch" type="search" placeholder="Ders ara"></label>
+      </div>
+      <div class="course-grid" id="courseGrid">
+        <article class="course-card coral" data-course="Matematik">
+          <div class="card-top"><span class="course-icon">∑</span><span class="level">8. sınıf</span></div>
+          <h3>Matematik</h3><p>Temelden soru çözümüne</p>
+          <div class="card-bottom"><span>3 konu</span><button class="start-button" type="button" data-course="Matematik">Başla <span aria-hidden="true">→</span></button></div>
+        </article>
+        <article class="course-card mint" data-course="Fen Bilimleri">
+          <div class="card-top"><span class="course-icon">✦</span><span class="level">8. sınıf</span></div>
+          <h3>Fen Bilimleri</h3><p>Merak et, bağlantıyı kur</p>
+          <div class="card-bottom"><span>3 konu</span><button class="start-button" type="button" data-course="Fen Bilimleri">Başla <span aria-hidden="true">→</span></button></div>
+        </article>
+        <article class="course-card yellow" data-course="Türkçe">
+          <div class="card-top"><span class="course-icon">Aa</span><span class="level">8. sınıf</span></div>
+          <h3>Türkçe</h3><p>Okuduğunu anlamanın yolu</p>
+          <div class="card-bottom"><span>3 konu</span><button class="start-button" type="button" data-course="Türkçe">Başla <span aria-hidden="true">→</span></button></div>
+        </article>
+        <article class="course-card blue" data-course="İngilizce">
+          <div class="card-top"><span class="course-icon">文</span><span class="level">8. sınıf</span></div>
+          <h3>İngilizce</h3><p>Kelime kelime güven kazan</p>
+          <div class="card-bottom"><span>3 konu</span><button class="start-button" type="button" data-course="İngilizce">Başla <span aria-hidden="true">→</span></button></div>
+        </article>
+      </div>
+      <p class="empty-state" id="emptyState" hidden>Aramana uygun bir ders bulamadık.</p>
+    </section>
+
+    <section class="about section-wrap" id="hakkinda">
+      <p class="eyebrow">TÜBİTAK projesi</p>
+      <h2>Öğrenmeyi herkes için erişilebilir kılmak.</h2>
+      <p>İlerleme, öğrencilerin kendi seviyelerini görmelerine ve küçük, sürdürülebilir adımlarla çalışmasına yardımcı olmak için tasarlanan ücretsiz bir eğitim platformu fikridir.</p>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <footer><span>ilerleme / 2026</span><span>Birlikte daha iyi öğreniyoruz.</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
